@@ -12,6 +12,7 @@ props:
       title: "Label"
       description: "Label for the component."
       default: "Recipe Collections"
+
 slots:
   content:
     title: "Content"

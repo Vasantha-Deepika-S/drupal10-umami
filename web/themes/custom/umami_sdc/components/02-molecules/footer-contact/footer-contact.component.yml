@@ -12,6 +12,7 @@ props:
       title: "Promo Title"
       description: "Label for the component."
       default: "Umami Food Magazine"
+      
 slots:
   content:
     title: "Content"

@@ -28,9 +28,10 @@
   flex-grow: 1;
   margin: 0;
   text-decoration: none;
-  color: #000;
+  color: $black;
   font-size: 1.424rem;
   font-weight: 400;
+  font-family: $secondary-font;
 
   a {
     text-decoration: none;
@@ -47,8 +48,14 @@
   .heading {
     margin: 0;
     text-decoration: none;
-    color: #000;
+    color: $black;
     font-size: 1.424rem;
+    font-family: $secondary-font;
+
+    span {
+      font-family: inherit;
+      font-size: inherit;
+    }
   }
 
   .card--vertical & {

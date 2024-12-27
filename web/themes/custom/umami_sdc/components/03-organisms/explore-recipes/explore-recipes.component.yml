@@ -6,7 +6,7 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes
-      description: Banner attributes.
+      description: Wrapper attributes.
       example: ""
 
 slots:

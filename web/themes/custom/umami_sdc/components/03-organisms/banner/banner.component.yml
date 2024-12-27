@@ -27,6 +27,7 @@ props:
       title: "CTA URL"
       description: "CTA URL for the banner componnet"
       default: "https://www.example.com"
+
 slots:
   image:
     title: Image

@@ -1,12 +1,12 @@
 name: Promoted Items
-description: promoted items component
+description: promoted items componnent.
 props:
   type: object
   properties:
     attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes
-      description: Banner attributes.
+      description: Wrapper Attributes.
       example: ""
 
 slots:
