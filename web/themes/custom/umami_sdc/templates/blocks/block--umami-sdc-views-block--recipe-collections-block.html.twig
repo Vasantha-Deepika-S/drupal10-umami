@@ -1,0 +1,12 @@
+
+{% block content %}
+  {% embed 'umami_sdc:recipe-collections' with {
+    attributes: create_attribute(),
+    label: label,
+    content: content|without('label'),
+  } %}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

@@ -1,0 +1,38 @@
+name: Card
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    html_tag:
+      type: string
+      title: HTML tag for wrapper
+      enum:
+        - article
+        - div
+      default: article
+    title:
+      type: string
+      title: Title
+      description: The card title.  
+      example: Card title
+    read_more:
+      type: string
+      title: 'Read more Label'
+      description: The text to display for the read more link.
+      example: Read more
+    read_more_url:
+      type: string
+      title: 'Read more URL'
+      description: The url to display for the read more link.
+      example: https://example.com
+    modifier:
+      type: string
+      default: ""
+slots:
+  image:
+    title: Content
+    required: true
+    description: The card content.

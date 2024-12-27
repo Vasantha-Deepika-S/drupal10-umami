@@ -1,0 +1,19 @@
+<div class="footer-promo">
+  <div class="footer-promo__image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="footer-promo__content">
+    {{
+      include('umami_sdc:heading', {
+        label: title,
+        tag: 'h3',
+        modifier: 'footer__title',
+      })
+    }}
+    <div class="footer_desc">{{ description }}</div>
+    {{ include('umami_sdc:link', {
+      label:  link_label,
+      url: link_url,
+    }) }}
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@use '../../../src/scss/_variables' as *;
+
+.footer-contact {
+  ul {
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5em;
+      list-style: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    background-color: inherit;
+    font-weight: 700;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: inherit;
+      background-color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

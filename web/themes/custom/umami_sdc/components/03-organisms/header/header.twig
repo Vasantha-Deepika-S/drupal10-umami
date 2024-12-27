@@ -1,0 +1,18 @@
+<div{{ attributes.addClass('header') }}>
+  <div class="header__logo">
+    {% block logo %}{% endblock %}
+  </div>
+  <button
+    type="button"
+    class="header__burger"
+    aria-controls="header__dropdown"
+    aria-expanded="false"
+    aria-label="{{ 'Toggle the menu'|t }}"
+  >
+    {{ source(componentMetadata.path ~ '/icons/burger.svg') }}
+  </button>
+  <div class="header__dropdown">
+    {% block navigation %}{% endblock %}
+  </div>
+  </div>
+</div>

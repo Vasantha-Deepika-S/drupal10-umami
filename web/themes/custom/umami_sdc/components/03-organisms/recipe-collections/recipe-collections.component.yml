@@ -1,0 +1,18 @@
+name: "Recipe Collections"
+description: "A Recipe Collections Component."
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: "Attributes"
+      description: "Wrapper attributes."
+    label:
+      type: string
+      title: "Label"
+      description: "Label for the component."
+      default: "Recipe Collections"
+slots:
+  content:
+    title: "Content"
+    description: "This is the recipe collections content section."

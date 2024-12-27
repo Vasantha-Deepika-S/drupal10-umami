@@ -1,0 +1,36 @@
+// Breakpoints for Media query.
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media screen and (min-width: 80rem) { /* 1200px (large) + 80px (side margins) = 1280px */
+      @content;
+    }
+  } @else if $point == tablet-max {
+    @media screen and (min-width: 60rem) { /* 960px */
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (min-width: 48rem) { /* 768px */
+      @content;
+    }
+  } @else if $point == mobile {
+    @media screen and (min-width: 30rem) { /* 480px */
+      @content;
+    }
+  } @else if $point == upto-mobile {
+    @media (max-width: 29.938rem) {
+      @content;
+    }
+  } @else if $point == upto-tablet {
+    @media (max-width: 47.938rem) {
+      @content;
+    }
+  } @else if $point == upto-tablet-max {
+    @media (max-width: 59.938rem) {
+      @content;
+    }
+  } @else if $point == upto-desktop {
+    @media (max-width: 79.938rem) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+{% block content %}
+  {% embed 'umami_sdc:footer-contact' with {
+    attributes: create_attribute(),
+    title: label,
+    content: content
+  } only %}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

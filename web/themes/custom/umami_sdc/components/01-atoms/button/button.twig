@@ -1,0 +1,8 @@
+{% set tag = tag|default('button') %} {# Default to 'button' if no tag is provided #}
+<{{ tag }}
+  class="button {{ modifier }}"
+  {% if tag == 'a' %} href="{{ url }}"{% endif %}
+  {{ attributes|raw }}
+>
+  {{ label }}
+</{{ tag }}>

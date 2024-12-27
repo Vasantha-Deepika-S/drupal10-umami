@@ -1,0 +1,68 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.banner {
+  @include breakpoint(tablet) {
+    position: relative;
+    background-color: $text-color;
+  }
+
+  &__inner {
+    @include breakpoint(tablet) {
+      display: flex;
+      align-items: center;
+      min-height: 54vw;
+      margin: auto;
+      padding: 0 4%;
+    }
+
+    @include breakpoint(tablet-max) {
+      min-height: 43vw;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    margin: 1rem 4%;
+    font-size: 1.188em;
+
+    @include breakpoint(tablet) {
+      position: relative; /* Establish stacking context to appear above absolutely positioned background image. */
+      max-width: 50%;
+      margin: 0;
+      padding: 1.777em;
+      color: #fff;
+      border: 1px solid $text-color;
+      background: rgba(0, 0, 0, 0.42);
+    }
+
+    @include breakpoint(tablet-max) {
+      max-width: 41%;
+    }
+
+  }
+
+  &__title {
+    margin: 0 0 0.5em 0;
+    font-family: $secondary-font;
+    font-size: 1.777em;
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+
+  &__image {
+    img {
+      @include breakpoint(tablet) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

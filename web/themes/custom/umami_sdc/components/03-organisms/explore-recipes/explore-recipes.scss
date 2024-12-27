@@ -1,0 +1,18 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.explore-recipes__title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding-right: 2.37rem;
+  padding-left: 2.37rem;
+  font-size: 1.77rem;
+  font-family: $secondary-font;
+  font-size: 1.266rem;
+  line-height: 1.2;
+  text-align: center;
+
+  @include breakpoint(tablet-max) {
+    font-size: 1.77rem;
+  }
+}

@@ -1,0 +1,69 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.button {
+  display: inline-block;
+  min-width: inherit;
+  max-width: inherit;
+  margin: 0;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  border: 2px solid $secondary-color;
+  border-radius: 3px;
+  background-color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 1.2rem;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+  color: $black;
+  background-color: #e6eee0;
+}
+
+.button--primary {
+  border-color: $pink;
+  background-color: $pink;
+}
+
+.button--primary:hover,
+.button--primary:active,
+.button--primary:focus {
+  outline-color: $white;
+  outline-offset: 2px;
+  background-color: #fcece7;
+}
+
+.button[disabled]:hover,
+.button[disabled]:active,
+.button[disabled]:focus,
+.button[disabled] {
+  cursor: default;
+  color: $text-color;
+  background: #767775;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+  padding: 0.75rem 0;
+
+  @include breakpoint(tablet-max) {
+    margin: 1rem -0.5rem;
+    padding: 0;
+  }
+}
+
+.form-actions > .button,
+.form-actions > .form-wrapper {
+  margin: 0.5rem;
+  line-height: normal;
+}

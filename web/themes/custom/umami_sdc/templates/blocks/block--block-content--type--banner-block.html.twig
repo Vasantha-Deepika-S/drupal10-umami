@@ -1,0 +1,19 @@
+
+{% block content %}
+  {% if content.field_content_link is not empty %}
+    {% set link = content.field_content_link['#items'].get(0) %}
+  {% endif %}
+
+  {% embed 'umami_sdc:banner' with { 
+    attributes: create_attribute(),
+    title: content.field_title,
+    summary: content.field_summary,
+    cta_label: link.title,
+    cta_url: link.url,
+    image: content.field_media_image
+  } only %}
+    {% block image %}
+      {{ image }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

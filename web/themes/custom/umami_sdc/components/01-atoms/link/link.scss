@@ -1,0 +1,57 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.link {
+  color: $white;
+  background-color: inherit;
+  font-weight: 700;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url("./images/svg/pointer--white.svg") no-repeat center center;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+
+  &--dark {
+    color: $black;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &.read-more {
+    color: $secondary-color;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    background-color: inherit;
+
+    &::after {
+      background: url("./images/svg/pointer.svg") no-repeat center center;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $secondary-color;
+      background: inherit;
+    }
+  }
+}

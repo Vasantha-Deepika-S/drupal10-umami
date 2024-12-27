@@ -1,0 +1,27 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.footer-promo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @include breakpoint(tablet-max) {
+    flex-direction: row;
+  }
+}
+
+.footer-block__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 60rem) {
+  .footer-block__title {
+    padding-top: 2rem;
+  }
+}
+
+.footer_desc {
+  margin-bottom: 1.28rem;
+}

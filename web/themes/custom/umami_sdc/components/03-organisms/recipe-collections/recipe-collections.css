@@ -1,0 +1,20 @@
+.recipe-collections {
+  padding: 3rem 4%;
+  color: #ffffff;
+  background: #767775;
+}
+.recipe-collections h2 {
+  margin-bottom: 1.5rem;
+}
+.recipe-collections a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.recipe-collections a:active, .recipe-collections a:focus, .recipe-collections a:hover {
+  text-decoration: underline;
+  outline-color: #ffffff;
+  background: transparent;
+  color: inherit;
+}

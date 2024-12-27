@@ -1,0 +1,60 @@
+.card {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #fcece7;
+  background-color: #ffffff;
+}
+.card.card--vertical {
+  display: grid;
+  gap: 1rem;
+  height: 100%;
+}
+
+.card__wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr auto auto;
+  height: 100%;
+}
+.card--vertical .card__wrapper {
+  grid-template-rows: auto 1fr auto;
+}
+
+.card__title {
+  flex-grow: 1;
+  margin: 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.424rem;
+  font-weight: 400;
+}
+.card__title a {
+  text-decoration: none;
+  color: #000;
+  background-color: inherit;
+}
+.card__title a:hover, .card__title a:focus {
+  text-decoration: underline;
+  color: #000000;
+}
+.card__title .heading {
+  margin: 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.424rem;
+}
+.card--vertical .card__title {
+  order: 2;
+}
+
+.card--vertical .card__link {
+  order: 3;
+}
+
+.card__image img {
+  display: block;
+  width: 100%;
+}
+.card--vertical .card__image {
+  order: 1;
+}

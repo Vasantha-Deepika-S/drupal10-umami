@@ -1,0 +1,23 @@
+label: "Heading"
+description: "A flexible heading component with dynamic tag support."
+fields:
+  label:
+    type: string
+    default: "Default Heading"
+  tag:
+    title: HTML tag for heading
+    type: string
+    enum:
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+    default: "h2"
+  modifier:
+    type: string
+    default: ""
+  attributes:
+    type: attributes
+    default: {}

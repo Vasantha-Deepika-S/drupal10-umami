@@ -1,0 +1,22 @@
+name: Link
+description: "Link Component for read more."
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: "Attributes"
+      description: "Wrapper attributes."
+    label:
+      type: string
+      title: "Link Label"
+      description: "CTA Label for the Promo componnet"
+      default: "Learn More"
+    url:
+      type: string
+      title: "Link URL"
+      description: "CTA URL for the Promo componnet"
+      default: "https://www.example.com"
+    modifier:
+      type: string
+      default: ""

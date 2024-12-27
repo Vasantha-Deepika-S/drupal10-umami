@@ -1,0 +1,24 @@
+<{{ html_tag|default('article') }}{{ attributes.addClass('card', modifier) }}>
+  <div class="card__wrapper">
+    <div class="card__title">
+      {{
+        include('umami_sdc:heading', {
+          label: title,
+          tag: 'h2',
+        })
+      }}
+    </div>
+    <div class="card__link">
+      {{
+        include('umami_sdc:link', {
+          label:  read_more,
+          url: read_more_url,
+          modifier: 'read-more',
+        })
+      }}
+    </div>
+    <div class="card__image">
+      {% block image %}{% endblock %}
+    </div>
+  </div>
+</{{ html_tag|default('article') }}>

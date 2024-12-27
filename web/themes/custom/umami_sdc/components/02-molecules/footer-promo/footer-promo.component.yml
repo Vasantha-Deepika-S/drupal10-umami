@@ -1,0 +1,34 @@
+name: Footer Promo
+description: "A Footer Promo Component."
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: "Attributes"
+      description: "Wrapper attributes."
+    title:
+      type: string
+      title: "Promo Title"
+      description: "Label for the component."
+      default: "Umami Food Magazine"
+    description:
+      type: string
+      title: "Promo Description"
+      description: "description for the component."
+      default: "Skills and know-how. Magazine exclusive articles, recipes and plenty of reasons to get your copy today."
+    link_label:
+      type: string
+      title: "Link Label"
+      description: "CTA Label for the Promo componnet"
+      default: "Learn More"
+    link_url:
+      type: string
+      title: "Link URL"
+      description: "CTA URL for the Promo componnet"
+      default: "https://www.example.com"
+    
+slots:
+  image:
+    title: Image
+    description: This is the banner image

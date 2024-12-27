@@ -1,0 +1,30 @@
+name: Button
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    tag:
+      type: string
+      title: HTML tag for wrapper
+      enum:
+        - button
+        - a
+      default: button
+    label:
+      type: string
+      title: Label
+      description: The button text.
+      example: Click me
+    url:
+      type: string
+      title: URL
+      description: The URL for the button link (used when html_tag is 'a').
+      example: https://example.com
+    modifier:
+      type: string
+      title: Modifier
+      description: CSS class modifiers for styling variations.
+      default: ""

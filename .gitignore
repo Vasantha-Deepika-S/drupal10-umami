@@ -1,0 +1,11 @@
+.ddev/
+vendor/
+web/sites/default/files/
+web/sites/default/settings.local.php
+web/sites/default/services.local.yml
+web/custom/umami_sdc/node_modules/
+*.log
+*.zip
+*.sql
+*.sql.gz
+*.DS_Store

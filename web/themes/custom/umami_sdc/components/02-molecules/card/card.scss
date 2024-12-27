@@ -1,0 +1,74 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins.scss' as *;
+
+.card {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #fcece7;
+  background-color: $white;
+
+  &.card--vertical {
+    display: grid;
+    gap: 1rem;
+    height: 100%;
+  }
+}
+.card__wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr auto auto;
+  height: 100%;
+
+  .card--vertical & {
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+.card__title {
+  flex-grow: 1;
+  margin: 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.424rem;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    background-color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $black;
+    }
+  }
+
+  .heading {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.424rem;
+  }
+
+  .card--vertical & {
+    order: 2;
+  }
+}
+
+.card__link {
+  .card--vertical & {
+    order: 3;
+  }
+}
+
+.card__image {
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .card--vertical & {
+    order: 1;
+  }
+}

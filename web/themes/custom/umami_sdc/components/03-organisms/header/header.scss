@@ -1,0 +1,135 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 4%;
+
+  @include breakpoint(desktop) {
+    padding: 0;
+  }
+
+  @include breakpoint(tablet) {
+    padding-top: 0;
+  }
+
+  &__logo {
+    flex: 0 1 40%;
+
+    @include breakpoint(tablet) {
+      flex: 0 1 220px;
+      margin: 2.5rem 0;
+    }
+
+    a {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__burger {
+    width: 41px;
+    height: 41px;
+    margin-right: -9px;
+    padding: 0 6px;
+    text-align: left;
+    border: 3px solid transparent;
+    border-radius: 0;
+    background-color: transparent;
+    line-height: 1;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    svg {
+      display: block;
+    }
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    &[aria-expanded="true"] ~ .header__dropdown {
+      overflow-y: auto;
+      max-height: 18.75rem;
+    }
+  }
+
+  &__dropdown {
+    overflow: hidden;
+    flex-basis: 100%;
+    max-height: 0;
+    transition: max-height 0.5s ease-in;
+
+    @include breakpoint(tablet) {
+      overflow: auto;
+      flex-basis: auto;
+      max-height: none;
+    }
+  }
+
+  .menu-main {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: $black;
+    font-family: $secondary-font;
+    font-size: 1.266rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    li {
+      margin-top: 0.8em;
+      text-align: center;
+
+      @include breakpoint(tablet) {
+        top: 0;
+        margin-bottom: 0;
+        margin-left: 2.5em;
+        margin-right: 0;
+
+        [dir="rtl"] & {
+          margin-right: 2.5em;
+          margin-left: 0;
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin: 5px 3px;
+        padding-bottom: 0.15em;
+        transition: all 0.2s;
+        text-decoration: none;
+        color: inherit;
+        border-bottom: solid 0.15em transparent;
+        background-color: inherit;
+
+        &:hover,
+        &.is-active:hover,
+        &:focus {
+          text-decoration: none;
+          color: $primary-color;
+          border-bottom-color: $primary-color;
+          background-color: inherit;
+        }
+
+        &:active,
+        &.is-active {
+          text-decoration: none;
+          border-bottom-color: $primary-color;
+        }
+      }
+    }
+  }
+}

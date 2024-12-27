@@ -1,0 +1,19 @@
+
+{% block content %}
+  {% if content.field_content_link is not empty %}
+    {% set link = content.field_content_link['#items'].get(0) %}
+  {% endif %}
+
+  {% embed 'umami_sdc:footer-promo' with {
+    attributes: create_attribute(),
+    title: content.field_title,
+    description: content.field_summary,
+    link_label: link.title,
+    link_url: link.url,
+    image: content.field_media_image
+  } only %}
+    {% block image %}
+      {{ image }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

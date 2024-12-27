@@ -1,0 +1,41 @@
+.link {
+  color: #ffffff;
+  background-color: inherit;
+  font-weight: 700;
+}
+.link::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  background: url("./images/svg/pointer--white.svg") no-repeat center center;
+}
+.link:active, .link:focus, .link:hover {
+  color: inherit;
+}
+.link--dark {
+  color: #000000;
+}
+.link--dark:active, .link--dark:focus, .link--dark:hover {
+  color: inherit;
+}
+.link.read-more {
+  color: #008068;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  background-color: inherit;
+}
+.link.read-more::after {
+  background: url("./images/svg/pointer.svg") no-repeat center center;
+}
+.link.read-more:active, .link.read-more:focus, .link.read-more:hover {
+  color: #008068;
+  background: inherit;
+}

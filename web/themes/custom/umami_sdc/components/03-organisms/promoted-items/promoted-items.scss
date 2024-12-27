@@ -1,0 +1,32 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.promoted-items {
+  display: grid;
+  gap: 14px;
+  padding-block: 1rem 2rem;
+
+  @include breakpoint(tablet-max) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(mobile) {
+    padding-block: 2rem 3rem;
+  }
+
+  &__right {
+    div {
+      height: 100%;
+    }
+
+    .view-content {
+      display: grid;
+      gap: 14px;
+
+      @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        block-size: 100%;
+      }
+    }
+  }
+}

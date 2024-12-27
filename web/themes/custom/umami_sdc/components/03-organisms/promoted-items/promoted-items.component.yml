@@ -1,0 +1,18 @@
+name: Promoted Items
+description: promoted items component
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Banner attributes.
+      example: ""
+
+slots:
+  content_single:
+    title: Content Single
+    description: Content block of Explore Recipes.
+  content:
+    title: Content
+    description: Content block of Explore Recipes.

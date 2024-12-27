@@ -1,0 +1,31 @@
+.promoted-items {
+  display: grid;
+  gap: 14px;
+  padding-block: 1rem 2rem;
+}
+@media screen and (min-width: 60rem) {
+  .promoted-items {
+    /* 960px */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 30rem) {
+  .promoted-items {
+    /* 480px */
+    padding-block: 2rem 3rem;
+  }
+}
+.promoted-items__right div {
+  height: 100%;
+}
+.promoted-items__right .view-content {
+  display: grid;
+  gap: 14px;
+}
+@media screen and (min-width: 30rem) {
+  .promoted-items__right .view-content {
+    /* 480px */
+    grid-template-columns: repeat(2, 1fr);
+    block-size: 100%;
+  }
+}

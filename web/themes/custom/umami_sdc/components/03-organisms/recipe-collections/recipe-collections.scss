@@ -1,0 +1,28 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.recipe-collections {
+  padding: 3rem 4%;
+  color: $white;
+  background: $grey-200;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      outline-color: $white;
+      background: transparent;
+      color: inherit;
+    }
+  }
+}

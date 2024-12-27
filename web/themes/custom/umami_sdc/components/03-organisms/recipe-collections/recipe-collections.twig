@@ -1,0 +1,13 @@
+<div class="recipe-collections" {{ attributes }}>
+  <div class="container ">
+    {{
+      include('umami_sdc:heading', {
+        label: label,
+        tag: 'h2',
+        modifier: 'text--center'
+      })
+    }}
+
+    {% block content %}{% endblock %}
+  </div>
+</div>

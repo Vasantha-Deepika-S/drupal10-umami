@@ -1,0 +1,20 @@
+
+name: Header
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    label:
+      type: string
+slots:
+  logo:
+    title: Logo
+  navigation:
+    title: Navigation Menu
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

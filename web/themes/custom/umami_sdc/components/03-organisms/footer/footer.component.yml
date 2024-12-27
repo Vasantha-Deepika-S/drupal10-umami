@@ -1,0 +1,14 @@
+
+name: Footer
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+slots:
+  footer_promo:
+    title: Logo
+  navigation:
+    title: Navigation Menu

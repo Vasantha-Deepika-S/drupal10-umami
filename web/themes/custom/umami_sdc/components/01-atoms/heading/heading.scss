@@ -1,0 +1,65 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+h1 {
+  margin: 0 0 1.07rem 0;
+  font-family: $secondary-font;
+  font-size: 1.424rem; /* +3 based on 1.125 modular scale (major second) */
+  line-height: 1.2;
+  @include breakpoint(tablet-max) {
+    font-size: 2.369rem;
+  }
+}
+
+h2 {
+  margin: 0 0 0.7rem 0;
+  font-family: $secondary-font;
+  font-size: 1.266rem; /* +2 based on 1.125 modular scale (major second) */
+  line-height: 1.2;
+  @include breakpoint(tablet-max) {
+    font-size: 1.77rem;
+  }
+}
+
+h3 {
+  margin: 0 0 0.96rem 0;
+  font-family: $secondary-font;
+  font-size: 1.125rem;
+  line-height: 1.2; /* +1 based on 1.125 modular scale (major second) */
+  @include breakpoint(tablet-max) {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  margin: 0 0 1.28rem 0;
+  font-family: $secondary-font;
+  font-size: 1rem;
+  line-height: 1.2;
+  @include breakpoint(tablet-max) {
+    font-size: 1.33rem;
+  }
+}
+h5 {
+  margin: 0 0 1.28rem 0;
+  font-family: $secondary-font;
+  font-size: 0.889rem; /* -1 based on 1.125 modular scale (major second) */
+  line-height: 1.2;
+  @include breakpoint(tablet-max) {
+    font-size: 1.25rem;
+  }
+}
+
+h6 {
+  margin: 0 0 1.28rem 0;
+  font-family: $secondary-font;
+  font-size: 0.79rem; /* -1 based on 1.125 modular scale (major second) */
+  line-height: 1.2;
+  @include breakpoint(tablet-max) {
+    font-size: 1rem;
+  }
+}
+
+.text--center {
+  text-align: center;
+}

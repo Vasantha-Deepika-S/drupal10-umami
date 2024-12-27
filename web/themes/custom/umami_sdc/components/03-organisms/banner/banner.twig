@@ -1,0 +1,26 @@
+<div{{ attributes.addClass('banner') }}>
+  <div class="container">
+    <div class="banner__inner">
+      <div class="banner__image">
+        {% block image %}{% endblock %}
+      </div>
+      <div class="banner__content">
+        {{
+          include('umami_sdc:heading', {
+            label: title,
+            tag: 'h2',
+            modifier: 'banner__title',
+          })
+        }}
+        <p>{{ summary }}</p>
+        {{ include('umami_sdc:button', {
+          label: cta_label,
+          modifier: 'button--primary',
+          url: cta_url,
+          tag: 'a'
+        }) }}
+
+      </div>
+    </div>
+  </div>
+</div>

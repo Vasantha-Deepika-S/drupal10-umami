@@ -1,0 +1,39 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.disclaimer {
+  @media screen and (min-width: 75rem) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__disclaimer,
+  &__copyright {
+    display: block;
+    text-align: center;
+    font-size: 0.94rem;
+
+    @media screen and (min-width: 75rem) {
+      margin-bottom: 0;
+      text-align: start;
+    }
+  }
+
+  &__disclaimer {
+    @media screen and (min-width: 75rem) {
+      max-width: 40%;
+      margin-left: 0.5rem;
+
+      [dir="rtl"] &{
+        margin-right: 0.5rem;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    @media screen and (min-width: 75rem) {
+      width: 25%;
+    }
+  }
+}

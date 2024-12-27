@@ -1,0 +1,38 @@
+@use '../../../src/scss/_variables' as *;
+@use '../../../src/scss/_mixins' as *;
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.28rem;
+
+  @include breakpoint(tablet-max) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.footer__promo {
+  @include breakpoint(tablet-max) {
+    overflow: hidden;
+    flex-basis: 60%;
+  }
+}
+
+.footer__contact {
+  @include breakpoint(tablet-max) {
+    flex-basis: 25%;
+  }
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.7rem 0;
+
+  @include breakpoint(tablet-max) {
+    padding-top: 2rem;
+  }
+}

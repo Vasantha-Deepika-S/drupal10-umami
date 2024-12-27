@@ -1,0 +1,17 @@
+.explore-recipes__title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding-right: 2.37rem;
+  padding-left: 2.37rem;
+  font-size: 1.77rem;
+  font-family: "Scope One", Georgia, serif;
+  font-size: 1.266rem;
+  line-height: 1.2;
+  text-align: center;
+}
+@media screen and (min-width: 60rem) {
+  .explore-recipes__title {
+    /* 960px */
+    font-size: 1.77rem;
+  }
+}

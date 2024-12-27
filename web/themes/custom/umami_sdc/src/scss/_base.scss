@@ -1,0 +1,119 @@
+@use './_variables' as *;
+@use './_mixins' as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin-top: 0;
+}
+
+*:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: $secondary-color;
+  outline-offset: 2px;
+}
+
+a {
+  text-decoration: underline;
+  color: $secondary-color;
+}
+a:hover,
+a:focus {
+  color: $primary-color;
+  background-color: $tertiary-color;
+}
+
+body {
+  margin: 0;
+  color: $text-color;
+  background: $cream;
+  font-family: $primary-font;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.layout-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.container {
+  max-width: min(calc(100vw - var(--drupal-displace-offset-left, 0px) - var(--drupal-displace-offset-right, 0px) - 2rem), 1200px);
+  margin: auto;
+}
+
+/* Add responsive side gutters to the outer layout container 'main' at smaller sizes */
+.main {
+  padding-inline: 4%;
+  padding-block: 0 2.37rem;
+
+  @include breakpoint(desktop) {
+    padding-inline: 0;
+  }
+}
+
+.layout-header {
+  background-color: $white;
+}
+
+.layout-bottom {
+  overflow: hidden;
+  padding: 2rem 4%;
+  background: $white;
+
+  @include breakpoint(desktop) {
+    padding: 2rem 0;
+  }
+}
+
+// Footer
+.footer {
+  padding: 2rem 4%;
+  text-align: center;
+  color: $white;
+  background-color: #5f635d;
+  font-size: 0.9rem;
+
+  @include breakpoint(tablet-max) {
+    text-align: left;
+
+    [dir="rtl"] & {
+      text-align: right;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    padding: 2rem 0;
+  }
+
+  a {
+    color: $white;
+    background-color: inherit;
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline-color: $white;
+    }
+  }
+}
