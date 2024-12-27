@@ -1,5 +1,5 @@
 ((Drupal, once) => {
-  Drupal.behaviors.umamiHeader = {
+  Drupal.behaviors.umamiSDCHeader = {
     attach(context) {
       once(
         'header',

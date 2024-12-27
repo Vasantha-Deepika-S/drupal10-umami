@@ -1,4 +1,4 @@
-label: "Heading"
+name: "Heading"
 description: "A flexible heading component with dynamic tag support."
 fields:
   label:

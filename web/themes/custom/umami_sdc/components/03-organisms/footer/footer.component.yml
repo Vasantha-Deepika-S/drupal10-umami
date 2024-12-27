@@ -10,6 +10,6 @@ props:
 
 slots:
   footer_promo:
-    title: Logo
+    title: Footer Promo
   navigation:
     title: Navigation Menu
